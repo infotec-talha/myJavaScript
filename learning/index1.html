@@ -1,0 +1,42 @@
+<html>
+<head>
+<script>
+function println(input)
+{
+ document.write(input,"<br/>");
+}
+
+var a = parseInt(prompt("enter any number"));
+var star = "*";
+
+function fillStar(star_length) {
+	i = 1; 
+	while (star_length > i) {
+		//document.write(star,"<br>
+		i++;
+		star = star.concat("*");
+	}
+}
+
+function printTrinagle() {
+  
+ counter = a; //intialize from the user input
+	if (counter > 0) {
+		for (counter; counter > 0; counter--) {
+			println(star);
+			star = star.slice(0, -1);
+		}
+	}
+}
+
+fillStar(a);
+printTrinagle();
+
+
+</script>
+</head>
+
+
+</html>
+
+

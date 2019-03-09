@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type = "text/javascript" src ="custom.js"></script>
+<script>
+var cars = ["toyota","suzuki","bmw","kia","audi","honda"];
+var a = 0;
+c = cars.length;
+do{
+println(cars[a]);
+a++;
+
+}
+while(a < c);
+
+
+
+</script>
+
+
+
+</head>
+<body>
+
+
+
+
+</body>
+</html>

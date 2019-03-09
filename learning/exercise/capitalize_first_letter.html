@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type = "text/javascript" src ="custom.js"></script>
+	<script>
+	//
+	//Techinal details and logic:
+	//Algorithm: 1. split the orginal string into an array where each element of array is the the word from the string.
+	//2.loop thorugh tge array obtained in step 1 and make the elemnt's first character as uppercase.
+	///3. join the array elemnts obtained in step 2
+function capital_letter(str) 
+
+    str = str.split(" ");
+
+    for (var i = 0, x = str.length; i < x; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+    return str.join(" "); // " "
+}
+
+document.write(capital_letter("talha,rasheed,manzoor,hayat,colony,bhalwal"));
+
+	</script>
+</head>
+
+
+</html>
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+/*
+* 
+*/
+function game() {
+	var colors = ['green', 'red', 'blue', 'pink', 'black', 'purple', 'orang'];
+	var len = colors.length;
+	var index = (Math.floor(Math.random() * len));
+	answer = colors[index];
+	flag = true;
+	count = 0; 
+	while (flag) {
+		guessed_answer = prompt('Enter a color');
+		if (guessed_answer == answer) {
+			flag = false;
+		}
+		count++;
+	}
+	alert('You are right the answer is ' + answer + ' ' +count);
+}
+
+</script>
+</head>
+<body>
+<input type="button" name="Start Game" value="Start Game" onclick="game()"/>
+
+
+</body>
+</html> 

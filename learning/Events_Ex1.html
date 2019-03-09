@@ -1,0 +1,23 @@
+
+<html>
+<head><title>Wake up call</title>
+ <script type="text/javascript">
+function wakeUpCall(){ // Function is defined here
+ setTimeout('print()',5000);  //
+}
+
+function print()
+{
+document.write("Hello");
+}
+ </script>
+ </head>
+<body bgcolor="lightblue" onUnload="alert('So long, stranger!')";>
+	<form>
+		<input type="button"
+ value="Wake me"
+ onClick="wakeUpCall()">
+ 
+		</form>
+	</body>
+</html>

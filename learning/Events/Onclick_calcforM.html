@@ -1,0 +1,38 @@
+<html>
+<head>
+	
+	<script>
+		function calculate(operationName){
+			var x = document.getElementsByName('num1')[0].value;//parseInt(document.calcform.num1.value);
+			var y = parseInt(document.calcform.num2.value);
+			var z = document.calcform.result;
+			
+			
+
+			 if(operationName =="Multiply"){
+				z.value = x*y;
+				
+			}else{
+				z.value = x/y;
+				
+		}	
+		}
+	
+	</script>
+</head>
+
+<body>
+	<form name="calcform">
+		Number1: <input type="text" name="num1"/><br/>
+		Number2: <input type="text" name="num2"/><br/>
+		Result: <input type="text" name="result"/><br/>
+		<input type="button" name="Multiply" value="Multiply" onclick="calculate('Multiply')"/>
+		<input type="button" name="Divide" value="Divide" onclick="calculate()"/>
+	</form>
+	
+</body>
+
+</html>
+
+object |
+       |input[0].vauli

@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type = "text/javascript" src ="custom.js"></script>
+<script>
+function sum(input){
+             
+ if (toString.call(input) !== "[object Array]")
+    return false;
+      
+            var total =  0;
+            for(var i=0;i<input.length;i++)
+              {                  
+                if(isNaN(input[i])){
+                continue;
+                 }
+                  total += Number(input[i]);
+               }
+             return total;
+            }
+println(sum([10,2,3]));
+println(sum([55,-40,3]));
+println(sum([1,2,3]));
+
+</script>
+</head>
+
+
+</html>

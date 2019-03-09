@@ -1,0 +1,11 @@
+1.	Write a JavaScript program to check if a given string contains equal number of p's and t's present.
+2.	Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.  
+ [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ] 
+Expected Output : 
+60°C is 140 °F
+45°F is 7.222222222222222°C  
+The string length must be greater or equal to three.
+3.	Write a JavaScript program to reverse the elements of a given array of integers length 3
+4.	Write a JavaScript program to swap the first and last elements of a given array of integers. 
+The array length should be at least 1
+5.	Write a JavaScript program to find the number which appears most in a given array of integers.

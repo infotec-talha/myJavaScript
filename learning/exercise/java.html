@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type = "text/javascript" src ="custom.js"></script>
+	<script>
+function start_spec_str(str)
+{
+  if (str.length < 4)
+  {
+    return false;
+  }
+  front = str.substring(0, 4);
+  if (front == 'Java') // 'java' == 'Java'?
+  {
+    return true;
+  }
+   else 
+   {
+    return false;
+  }
+}
+
+println(start_spec_str("JavaScript"));  
+println(start_spec_str("Java"));
+println(start_spec_str("steel"));
+	</script>
+</head>
+
+
+</html>

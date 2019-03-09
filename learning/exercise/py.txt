@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type = "text/javascript" src ="custom.js"></script>
+	<script>
+		function string_check(str1) {
+  if (str1.substring(0, 2) === 'Py'); 
+  {
+    return str1;
+  }
+  
+}
+
+println(string_check("Python"));
+document.write(string_check("thon"));
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

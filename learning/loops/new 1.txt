@@ -1,0 +1,22 @@
+var cars = ["toyota","suzuki","bmw","kia","audi","honda"];
+c = cars.length;
+do{
+println(cars[c]);
+c--;
+
+}
+
+while(c >= a);
+var cars = ["toyota","suzuki","bmw","kia","audi","honda"];
+c = cars.length;
+while(c >= a)
+{
+println(cars[c]);
+c--;
+}
+
+var cars = ["toyota","suzuki","bmw","kia","audi","honda"];
+c = cars.length;
+for(c;c >= 0;c--){
+println(cars[c]);
+}

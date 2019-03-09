@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type = "text/javascript" src ="custom.js"></script>
+<script>
+function leapyear(year)
+{
+if(year % 4 === 0 && year % 100!==0 || year%400===0)
+return true;
+else 
+return false;
+}
+
+println(leapyear(2016));
+println(leapyear(2000));
+println(leapyear(1700));
+println(leapyear(1800));
+println(leapyear(100));
+
+
+	
+</script>
+</head>
+
+
+</html>

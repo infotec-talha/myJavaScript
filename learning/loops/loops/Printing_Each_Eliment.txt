@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type = "text/javascript" src ="custom.js"></script>
+<script>
+var cities =  ["Dunedin", "Christchurch", "Auckland", "Wellington"]
+var b = cities.length;
+for (a = 0;a < b;a++){
+println(cities[a]);
+}
+
+</script>
+
+
+
+</head>
+<body>
+
+
+
+
+</body>
+</html>

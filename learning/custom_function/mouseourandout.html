@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>onmouseover/onmouseout using custom functions</title>
+	<script>
+	function handleMouseOverEvent(a){
+	a.style.color = "green";
+	a.style.backgroundColor = "pink";
+	//a.innerHTML = "CULSER ON";
+	}
+		function handleMouseOutEvent(a){
+	a.style.color = "blue";
+	a.style.backgroundColor = "red";
+	//a.innerHTML = "CULSER OUT";
+	}
+	</script>
+</head>
+
+<body>
+	<p onmouseover="handleMouseOverEvent(this)" onmouseout="handleMouseOutEvent(this)">Mouse Over/Mouse Out</p>
+</body>
+
+</html>

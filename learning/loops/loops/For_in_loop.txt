@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type = "text/javascript" src ="custom.js"></script>
+<script>
+var cities =  ["Dunedin", "Christchurch", "Auckland", "Wellington"];
+
+ for (citiesValue in cities){
+        println(cities[citiesValue]);
+    }
+var cars = ["toyota","suzuki","bmw","kia","audi","honda"];
+for(carsValue in cars){
+println(cars[carsValue]);
+}
+
+</script>
+
+
+
+</head>
+<body>
+
+
+
+
+</body>
+</html>

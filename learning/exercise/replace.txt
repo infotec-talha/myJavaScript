@@ -1,0 +1,14 @@
+<html>
+<head>
+<script type = "text/javascript" src ="custom.js"></script>
+	<script>
+var n = "talha";
+println(n.replace("a",""));
+println(n.replace("h",""));
+println(n.replace("t",""));
+println(n.replace("l",""));
+	</script>
+</head>
+
+
+</html>

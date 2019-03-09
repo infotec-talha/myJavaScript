@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type = "text/javascript" src ="custom.js"></script>
+<script>
+	
+function sum(a, b, c) 
+{
+  return(a + b + c);
+}
+println(sum(50, 50 ,50));
+println(sum(20, 50 ,30));
+
+
+</script>
+</head>
+
+
+</html>
