@@ -3,3 +3,4 @@ Date            Day       Attendance          Reason                          To
 3/14/2019       Thu         P
 3/17/2019       sun         p                   
 3/18/2019       Mon         A                 Doing prectice                string methods
+3/19/2019       Tue         p
