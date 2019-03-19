@@ -1,5 +1,5 @@
-var resident = new Object();
-resident.name = "talha";
+var resident = new Object(); //creat object
+resident.name = "talha";   //object properties
 resident.city = "bhalwal";
 resident.area = "manzoor hayat colony";
 resident.street = "A1";
