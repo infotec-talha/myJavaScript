@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>To Do List</title>
-<style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-</style>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script>
+function addTask(){
+    console.log("inside add task");
+     var table = document.getElementById("task_list");
+     var task=document.getElementById("task");
+     var item = task.value;
+     var  tr = table.insertRow();
+     var td = tr.insertCell(0);
+     td.innerHTML = "<input type=\"checkbox\">";
+     var td1 = tr.insertCell(1);
+    td1.innerHTML =item;
+    var td2 = tr.insertCell(2);
+    td2.innerHTML="<button type=\"button\">Delete</button>";
+
+     //table.innerHTML = "<tr>"
+       //              +"<td><input type=\"checkbox\"></td>"+
+      //              "<td>"+item+"</td>"+
+    //            "<td><i class=\"fa fa-trash-o\" style=\"font-size:24px\"></i></td>"+
+        ////            "</tr>";
+}
+
+
+
+</script>
+
 </head>
+
 <body>
-<h1>To-Do-List</h1>
-<div align = "center" border="border:1px solid black">
-<input type="text" placeholder="New Task" size="50">
-<button type="button">Add</button>
-<div align = "center">
-<table style="width:50%" align="center"><br><br>
-<tr>
-<td><input type="checkbox"></td>
-<td>First Item</td>
-<td><i class="fa fa-trash-o" style="font-size:24px"></i></td>
-</tr>
-<tr>
-<td><input type="checkbox"></td>
-<td>Second Item</td>
-<td><i class="fa fa-trash-o" style="font-size:24px"></i></td>
-</tr>
-<tr>
-<td><input type="checkbox"></td>
-<td>Third Item</td>
-<td><i class="fa fa-trash-o" style="font-size:24px"></i></td>
-</tr>
+    <h1>To-Do-List</h1>
+    <div align="center" border="border:1px solid black">
+        <input type="text" id="task" placeholder="New Task" size="50">
+        <button type="button" id="add_btn"  onclick="addTask()">Add</button>
+        <div align="center">
+            <table style="width:50%" id="task_list" align="center"><br><br>
+              
+             
+               
 
-</table>
-</div>
-</div>
+            </table>
+        </div>
+    </div>
 
 
 
 
 
-</body>    
+</body>
+
 </html>
