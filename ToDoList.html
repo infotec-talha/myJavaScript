@@ -7,19 +7,24 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <script>
+
+    var numRows= 0;
      
 function addTask(){
     console.log("inside add task");
+
      var table = document.getElementById("task_list");
      var task=document.getElementById("task");
      var item = task.value;
-     var  tr = table.insertRow();
+     var  tr = table.insertRow(numRows);
+    
      var td = tr.insertCell(0);
      td.innerHTML = "<input type=\"checkbox\">";
      var td1 = tr.insertCell(1);
     td1.innerHTML =item;
     var td2 = tr.insertCell(2);
-    td2.innerHTML="<button type=\"button\" onclick=\"deleteTask()\">Delete</button>";
+    td2.innerHTML="<button type=\"button\" value="    +numRows+   " onclick=\"deleteTask(this)\">Delete</button>";
+   numRows++; 
 
      //table.innerHTML = "<tr>"
        //              +"<td><input type=\"checkbox\"></td>"+
@@ -28,9 +33,10 @@ function addTask(){
         ////            "</tr>";
 }
 
-function deleteTask(){
+function deleteTask(task_row){
+    
     console.log("delete task");
-    document.getElementById("task_list").deleteRow("this");
+    document.getElementById("task_list").deleteRow(task_row.value);
 }
 
 
