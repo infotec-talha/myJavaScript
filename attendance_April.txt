@@ -1,3 +1,7 @@
-Date                    Day                     Attendance             Reason                   Topic
+Date..                    Day..                    Attendance..             Reason..                   Topic..
 4/1/2019                Mon                         A              Electorcity prob
 4/2/2019                Tue                         A              Talha is late
+4/3/2019                wed                         A              Talha is late
+4/4/2019                Thu                         P                            
+5/4/2019                Fri                         P
+6/4/2019                Sat                         P              
