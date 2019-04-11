@@ -3,7 +3,9 @@ Date..                    Day..                    Attendance..             Reas
 4/2/2019                Tue                         A              Talha is late
 4/3/2019                wed                         A              Talha is late
 4/4/2019                Thu                         P                            
-5/4/2019                Fri                         P
-6/4/2019                Sat                         P  
-7/4/2019                Sun                         P
-8/4/2019                Mon                         A        
+4/5/2019                Fri                         P
+4/6/2019                Sat                         P  
+4/7/2019                Sun                         P
+4/8/2019                Mon                         A
+4/9/2019                Tue                         A
+4/10/2019               Wed                         A
