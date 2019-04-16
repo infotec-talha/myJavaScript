@@ -6,6 +6,9 @@ Date..                    Day..                    Attendance..             Reas
 4/5/2019                Fri                         P
 4/6/2019                Sat                         P  
 4/7/2019                Sun                         P
-4/8/2019                Mon                         A
+4/8/2019                Mon                         A              
 4/9/2019                Tue                         A
 4/10/2019               Wed                         A
+4/11/2019               Thu                         p
+4/12/2019               Fri                         A 
+4/13/2019               Sat                         P 
