@@ -1,14 +1,5 @@
 Date            Day       Attendance          Reason                          Topic
-3/13/2019       Wed         A                  Did not come
-3/14/2019       Thu         P
-3/17/2019       sun         p                   
-3/18/2019       Mon         A                 Doing prectice                string methods
-3/19/2019       Tue         p
-3/20/2019       Wed         A
-3/21/2019       Thu         A
-3/22/2019       Fri         A
-3/23/2019       Sat         A
-3/24/2019       Sun         A
-3/25/2019       Mon         A
-3/26/2019       Tue         p
-3/27/2019       Mon         A               Talha did not come 
+17/7/2019      Wed          P
+18/7/2019      Thu          P
+19/7/2019      Fri          A                Electercity problem.
+20/7/2019      Sat          A               Talha did't come on time.
