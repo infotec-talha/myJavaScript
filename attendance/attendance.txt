@@ -3,3 +3,6 @@ Date            Day       Attendance          Reason                          To
 18/7/2019      Thu          P
 19/7/2019      Fri          A                Electercity problem.
 20/7/2019      Sat          A               Talha did't come on time.
+21/7/2019      Sun          A               Hafeez was busy.
+22/7/2019      Mon          P 
+23/7/2019      Tue          P               No lecture work with assignment.
