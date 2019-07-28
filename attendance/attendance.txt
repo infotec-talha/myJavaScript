@@ -8,3 +8,6 @@ Date            Day       Attendance          Reason                          To
 23/7/2019      Tue          P               No lecture work with assignment.
 24/7/2019      Wed          P 
 25/7/2019      Thu          P               No lecture work with assignment.
+26/7/2019      Fri          A               talha did not come on lecture.
+27/7/2019      Sat          A                talha did not come on lecture.
+28/7/2019      Sun          P 
