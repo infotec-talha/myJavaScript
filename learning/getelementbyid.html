@@ -1,0 +1,25 @@
+ <html>
+<head>
+<script>
+function getcube(){  
+    var element=document.getElementById("number"); // document.getelementById("number").value;
+     var number  = element.value;
+    document.write(number*number*number);  
+    } 
+	
+	</script>
+</head>
+
+<body>
+ <form>  
+    Enter No:<input type="text" id="number" name="number" value=""/><br/>  
+    <input type="button" value="cube" onclick="getcube()"/>  
+    </form> 	
+	<p id="demo"></p>
+	<script>
+document.getElementById("demo").innerHTML = "HELLO World!";
+</script>
+	
+</body>
+
+</html>

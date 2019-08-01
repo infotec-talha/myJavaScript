@@ -1,0 +1,15 @@
+<html>
+ <head>  
+     <script>  
+     function changeText2(){
+	var userInput = document.getElementById('userInput').value;
+	document.getElementById('bold1').innerHTML = userInput;
+}
+    </script>
+    </head> 
+    <body>  
+            <p>Welcome to the site <b id='bold1'>dude</b> </p> 
+            <input type='text' id='userInput' value='Enter Text Here' />
+            <input type='button' onclick='changeText2()' value='Change Text'/>
+    </body>
+    </html>

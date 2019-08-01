@@ -1,0 +1,51 @@
+<html>
+ <head>  
+     <script>  
+function addbtn(){
+    document.calcform.disply.value +="+";
+}
+function divbtn(){
+    document.calcform.disply.value +="/";
+}
+function subbtn(){
+    document.calcform.disply.value +="-";
+}
+function mulbtn(){
+    document.calcform.disply.value +="*";
+}
+function clrbtn(){
+    document.calcform.disply.value ="";
+}
+
+    </script>
+    </head> 
+    <body>
+      <div align ="center">   
+        <form name=calcform>
+            <textarea name ="disply" placeholder="0"  style="text-align:right"></textarea><br>
+             <input type="button" value="1" style="width:50px;height:50px;" onclick = "document.calcform.disply.value +='1'"/>
+             <input type="button" value="2"  style="width:50px;height:50px;" onclick = "document.calcform.disply.value +='2'"/>
+             <input type="button" value="3"  style="width:50px;height:50px;" onclick = "document.calcform.disply.value +='3'"/>
+             <br>
+             <input type="button" value="4"  style="width:50px;height:50px;" onclick = "document.calcform.disply.value +='4'"/>
+             <input type="button" value="5"  style="width:50px;height:50px;" onclick = "document.calcform.disply.value +='5'"/>
+             <input type="button" value="6"  style="width:50px;height:50px;" onclick = "document.calcform.disply.value +='6'"/>
+             <br>
+             <input type="button" value="7"  style="width:50px;height:50px;" onclick = "document.calcform.disply.value +='7'"/>
+             <input type="button" value="8"  style="width:50px;height:50px;" onclick = "document.calcform.disply.value +='8'"/>
+             <input type="button" value="9"  style="width:50px;height:50px;" onclick = "document.calcform.disply.value +='9'"/>
+             <br>
+             <input type="button" value="0" style="width:50px;height:50px;" onclick = "document.calcform.disply.value +='0'"/>
+             <input type="button" value="+" style="width:50px;height:50px;" onclick = "addbtn()"/>
+             <input type="button" value="*" style="width:50px;height:50px;" onclick = "mulbtn()"/>
+             <br>
+             <input type="button" value="/" style="width:50px;height:50px;" onclick =  "divbtn()"/>
+             <input type="button" value="-" style="width:50px;height:50px;" onclick =  "subbtn()"/>
+             <input type="button" value="=" style="width:50px;height:50px;" onclick =  "document.calcform.disply.value=eval(document.calcform.disply.value)"/>
+             <br>
+             <input type="button" value="C" style="width:50px;height:50px;" onclick =  "clrbtn()"/>
+        </form>
+        
+    </div>  
+    </body>
+    </html> 

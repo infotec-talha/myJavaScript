@@ -51,7 +51,7 @@ objectPass(vehicle);
 //we can also access the object properties with bracket .
 
 console.log("=====================");
-function createObjectEx1(){
+function createObjectEx1(){                                  
 var myCar = new Object();
 myCar['make'] = 'Ford';
 myCar['model'] = 'Mustang';
@@ -65,13 +65,14 @@ var myObj = new Object(),
     str = 'myString', 
     rand = Math.random(),
     obj = new Object();
-
+    obj.prop1 = "ghi";
+    obj.prop2 = "lmn";
 myObj.type              = 'Dot syntax';
 myObj['date created']   = 'String with space';
 myObj[str]              = 'String value';
-myObj[rand]             = 'Random Number';
-myObj[obj]              = 'Object';
-myObj['']               = 'Even an empty string';
+myObj['randNum']             =  rand;
+
+myObj['child']              = obj;
 console.log(JSON.stringify(myObj, null, 4));
 }
 createObjectEx2();
@@ -89,7 +90,6 @@ function Cars(make, model, year,tire) {
     this.model = model;
     this.year = year;
     this.tire = tire;
-console.log(this.make , model , year);
 	
   }
 var mycar = new Cars('Eagle', 'Talon TSi', 1993);
@@ -105,6 +105,11 @@ var tire = {type:"car",company:"panther"};
 hondacar = new Cars("honda","civic",1999,tire);
 console.log(JSON.stringify(hondacar,null,2));
 console.log(JSON.stringify(kenscar,null,2));
+var dealerShip = {cars:[]};
+dealerShip.cars[0] = hondacar;
+
+dealerShip.cars[1]=kenscar;
+console.log(JSON.stringify(dealerShip,null,2));
 ///////////
  var plan1Name = "Basic";
  var plan1Price = 3.99;
@@ -154,11 +159,11 @@ for (var man in person) {
   console.log(man, ': ', person[man]);
  }
  ////object constructors.
- function Plan(nam, pric, spac, transf, pags) {
-  this.name = nam;
-  this.price = pric;
-  this.space = spac;
-  this.transfer = transf;
+ function Plan(name, price, space, transfer, pags) {
+  this.name = name;
+  this.price = price;
+  this.space = space;
+  this.transfer = transfer;
   this.pages = pags;
 
  }

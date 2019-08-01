@@ -5,4 +5,5 @@ function println(input)
  document.writeln("new line");
  var str = "my string";
 
-}
+} 
+

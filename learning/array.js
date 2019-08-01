@@ -5,8 +5,6 @@ var city3 = "Denver";
 var city4 = "Los Angeles";
 var city5 = "Seattle";
 console.log("Welcome to",city2);
-var cities = ["Atlanta", "Baltimore", "Chicago", "Denver", "Los Angeles", "Seattle"];
-console.log("Welcome to",cities[2]);
 var mix = [36,"talha","adnan","rasheed"];
 console.log(mix[0],mix[2],mix[1],mix[3]);
 ///assign value to empty array.
@@ -26,7 +24,7 @@ pets.unshift("pigon","hen");//adding element,s in start of an array.
 pets.splice(2, 2,);//without adding new element remove elements from specific position.
 //pets.splice(2, 0, "pig", "duck", "emu");//without removing element adding new element.
 console.log(JSON.stringify(pets,null,2));
-var noPets = pets.slice(2,4);
+var noPets = pets.slice(2,4);//this method copy element from array from any position u want and return into a new array.
 console.log(noPets);
 var months = ['Jan', 'March', 'April', 'Jul'];
 months.splice(1, 0, 'Feb');
@@ -36,4 +34,19 @@ months.splice(4, 0, 'May');
 console.log(months);
 months.splice(5, 1, "June" );
 console.log(months);
+var cities = ["Atlanta", "Baltimore", "Chicago", "Denver", "Los Angeles", "Seattle"];
+console.log("Welcome to",cities[2]);
+console.log(cities[cities.length - 1]);//access last element from array
+console.log(cities[0]);//access first element from array
+console.log(cities[4]);//access 4th element from array
+console.log(cities[2]);//access 2nd element from array
+console.log(cities[cities.length - 2]);//access 2nd last element from array
+var mammals = new Array("cat","dog","human","whale","seal",50, new Array("ement1"), {prop1:"value1",prop2:"prop2Value"});
+console.log("===Stringifyin Mamlas===");
+console.log(JSON.stringify(mammals,null,2));
 
+console.log("===mamals loop===");
+
+for (var i = 0; i < mammals. length; i++) {
+    console.log(mammals[i]);
+}
