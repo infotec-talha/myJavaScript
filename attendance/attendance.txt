@@ -12,3 +12,6 @@ Date            Day       Attendance          Reason                          To
 27/7/2019      Sat          A                talha did not come on lecture.
 28/7/2019      Sun          P 
 29/7/2019      Mon          P               no lecture haffeez was busy.
+30/7/2019      Tue          P               No lecture work with assignment.
+31/7/2019      Wed          A               Talha did't come on time.
+01/8/2019      Thu          P
