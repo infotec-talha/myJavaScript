@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+ 
+ .first{
+    width:130px;
+    
+}
+.second{
+    width:400px;
+}
+.navbar-nav > li{
+  padding-left:5px;
+  padding-right:5px;
+}
+.row1{
+ background-color:darkgreen;    
+}
+.row2{
+    background-color:red;
+    
+}
+#row3{
+    background-color:none;
+}
+#grad1 {
+  height:340px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.774),rgba(0, 0, 0, 0.774));
+}
+</style>
+
+</head>
+<body>
+<div id="grad1">
+<div align="center"><br>
+<p style="color:white;" id="date"></p>
+<p style="color:white;font-size:40px;" id="saving">0</p>
+<table>
+<tr class="row1">
+<td class="first" style="font-size:11px;">INCOME</td>
+<td style="color:white;font-size:13px;" id="income_value"></td>
+   
+</tr>
+<tr class="row2">
+<td class="first" style="font-size:11px;">EXPENSES</td>
+<td style="color:white;font-size:13px;" id="expenses"> &nbsp;&nbsp;</td>   
+</div>
+</table>
+</div>    
+</div>
+
+<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <select name="operator" id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    
+                  </select>
+              </li><br>
+          <li class="nav-item">
+            <input type="text" placeholder="Add discription" class="nav-link" size="40" id="description"/> 
+          </li>
+          <li class="nav-item">
+             <input type="number" placeholder="value" class="nav-link" size="6" id="expense"/>
+          </li>
+          <button class="nav-link" onclick="addExpenseIncomeRow()">
+            <i class="fa fa-plus" style="font-size:10px"></i> 
+          </button>
+          </li>
+          
+        </ul>
+      </nav>
+      <div class="container">
+        <table  cellpadding="0" cellspacing="0" style="width:50%;float:left" class="tab" id="income_tab">
+          <tr>
+          <th style="font-size:11px;">Income</th>
+          <th style="font-size:11px;">Amount</th>
+         </tr>
+        </table>
+        
+         <table class="tab" style="width:50%;" id="expense_tab">
+          <tr>
+            <th style="font-size:11px;color:red">Expense</th>
+         <th style="font-size:11px;color:red">Amount</th>
+        
+        </tr>
+      </table>     
+                 
+
+    </div>
+    <script>
+      var num = 1;
+        function addExpenseIncomeRow() {
+            var table = addRow();
+
+            var total=calculateTotalIncomAndExpense(table);
+            calculateAndUpdateSaving();
+
+            
+           // saving();
+
+        }
+
+        document.getElementById("date").innerHTML = new Date();
+
+        function addRow() {
+            var expense = document.getElementById("expense");
+            var table; 
+            var operator = document.getElementById("operator").value;
+            var description = document.getElementById("description");
+            if (operator == "+")
+                table = document.getElementById("income_tab");
+            else
+                table = document.getElementById("expense_tab");
+            var tr = table.insertRow(num);
+
+            td = tr.insertCell(0);
+            td.innerHTML = description.value;
+            var td1 = tr.insertCell(1);
+            td1.innerHTML = expense.value;
+            return table;
+
+        }
+        
+        function calculateTotalIncomAndExpense(table) {
+          totalamount=0;
+
+            for (var row = 1; row < table.rows.length; row++) {
+
+              totalamount = totalamount + parseInt(table.rows[row].cells[1].innerHTML);
+            }
+            if (table.id == "income_tab"){
+                document.getElementById("income_value").innerHTML =totalamount;
+              
+            }
+            else
+               {
+                document.getElementById("expenses").innerHTML =totalamount;
+               
+                }
+                
+
+        }
+     function calculateAndUpdateSaving(){
+      document.getElementById("saving").innerHTML=document.getElementById("income_value").innerHTML - document.getElementById("expenses").innerHTML;
+
+     }
+
+    
+    </script>
+</body>
+</html>
