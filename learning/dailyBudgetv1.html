@@ -37,10 +37,11 @@
 
 </head>
 <body>
+  <input id="row_id" value="0" type="hidden">
 <div id="grad1">
 <div align="center"><br>
 <p style="color:white;" id="date"></p>
-<p style="color:white;font-size:40px;" id="saving">0</p>
+<p style="color:white;font-size:40px;" id="saving"></p>
 <table>
 <tr class="row1">
 <td class="first" style="font-size:11px;">INCOME</td>
@@ -49,7 +50,7 @@
 </tr>
 <tr class="row2">
 <td class="first" style="font-size:11px;">EXPENSES</td>
-<td style="color:white;font-size:13px;" id="expenses"> &nbsp;&nbsp;</td>   
+<td style="color:white;font-size:13px;" id="expenses">0</td>   
 </div>
 </table>
 </div>    
@@ -82,6 +83,7 @@
           <tr>
           <th style="font-size:11px;">Income</th>
           <th style="font-size:11px;">Amount</th>
+          <th style="font-size:11px;">Actions</th>
          </tr>
         </table>
         
@@ -89,6 +91,7 @@
           <tr>
             <th style="font-size:11px;color:red">Expense</th>
          <th style="font-size:11px;color:red">Amount</th>
+         <th style="font-size:11px;color:red">Actions</th>
         
         </tr>
       </table>     
@@ -99,12 +102,12 @@
       var num = 1;
         function addExpenseIncomeRow() {
             var table = addRow();
-
             var total=calculateTotalIncomAndExpense(table);
             calculateAndUpdateSaving();
-
-            
-           // saving();
+            delete_income(id,num);
+            delete_expense(id,num);
+            calculateAndUpdateSaving();
+           
 
         }
 
@@ -115,15 +118,29 @@
             var table; 
             var operator = document.getElementById("operator").value;
             var description = document.getElementById("description");
-            if (operator == "+")
+           row_id = document.getElementById("row_id");
+           row_val = parseInt(row_id.value)+1;
+           row_id.value = row_val;
+
+            if (operator == "+"){
                 table = document.getElementById("income_tab");
-            else
+                flag = 'Delete Income';
+                method = 'delete_income('+row_val+','+expense.value+')';
+            }
+            else{
                 table = document.getElementById("expense_tab");
+                flag = 'Delete Expense';
+                method = 'delete_expense('+row_val+','+expense.value+')';
+            }
             var tr = table.insertRow(num);
+            tr.setAttribute("id", row_val);
 
             td = tr.insertCell(0);
             td.innerHTML = description.value;
             var td1 = tr.insertCell(1);
+            td2 = tr.insertCell(2);
+            button = '<button onclick="'+method+'">'+flag+'</button>';
+            td2.innerHTML = button;
             td1.innerHTML = expense.value;
             return table;
 
@@ -149,10 +166,29 @@
 
         }
      function calculateAndUpdateSaving(){
-      document.getElementById("saving").innerHTML=document.getElementById("income_value").innerHTML - document.getElementById("expenses").innerHTML;
+      exp = document.getElementById("expenses").innerHTML;
+     // if(isNaN(exp))
+      //  exp= 0;
+      document.getElementById("saving").innerHTML=document.getElementById("income_value").innerHTML - exp;
 
      }
+     function delete_income(id,number){
+      document.getElementById(id).remove();
+      income_id = document.getElementById("income_value");
+      income_val = parseInt(income_id.innerHTML)-parseInt(number);
+      document.getElementById("saving").innerHTML=income_val;
+      income_id.innerHTML = income_val;
+      
 
+     }
+     function delete_expense(id,number){
+      document.getElementById(id).remove();
+      expenses_id = document.getElementById("expenses");
+      expenses_val = parseInt(expenses_id.innerHTML)-parseInt(number);
+      expenses_id.innerHTML = expenses_val;
+      document.getElementById("saving").innerHTML=expenses_val;
+      
+     }
     
     </script>
 </body>
